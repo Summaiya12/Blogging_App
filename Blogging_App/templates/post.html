@@ -1,0 +1,45 @@
+{% include 'partials/header.html' %}
+
+         <div class="container mt-5">
+            <div class="row">
+      <div class="col-md-6" style="float:none;margin:auto;">
+                  <div class="mail_section">
+                     <h1 class="newsletter_taital"> Your Blog</h1>
+                              <div class="mail_section">
+
+                                    <div class="container">
+
+    </div>
+    <br>
+    <div class="container custom-container" style="max-width: 1350px; ">
+        <h1>My Posts </h1>
+        {% for post in posts %}
+        <article class="media content-section">
+
+            <div class="media-body" style="border: 1px solid black; padding: 23px; margin-bottom: 10px;">
+
+                <div class="article-metadata">
+                    <!-- <h3 aligh="left">{{ post.author }} </h3>
+                    <h5 aligh="right">{{ post.date_posted|date:"F d, Y" }}</h5> -->
+                    <h2 class="text-uppercase" style="text-align:left;float:left; color: #000000;">{{ post.author }}</h2>
+                    <h5 style="text-align:right;float:right;">{{ post.date_posted|date:"F d, Y" }}</h5>
+                    <hr style="clear:both;" />
+
+                </div>
+                      <div class="about_img"><img src="/media/{{post.image}}"></div>
+                <h3>{{ post.title }}</h3>
+                <p class="article-content">{{ post.content }}</p>
+                <br><br>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+                              </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+{% include 'partials/footer.html' %}
